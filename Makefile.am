@@ -153,6 +153,8 @@ libpal_la_list      = ./configs/qcom/IoT/qcm6490/usecaseKvManager.xml \
                       ./configs/qcom/IoT/sm8750/resourcemanager_SM8750_MTP.xml
                       ./configs/qcom/IoT/GLYMUR/mixer_paths_GLYMUR_CRD.xml \
                       ./configs/qcom/IoT/GLYMUR/resourcemanager_GLYMUR_CRD.xml
+                      ./configs/qcom/IoT/MAHUA/mixer_paths_MAHUA_CRD.xml \
+                      ./configs/qcom/IoT/MAHUA/resourcemanager_MAHUA_CRD.xml
 
 
 # install essential xml files under /etc
@@ -180,6 +182,8 @@ install-data-hook:
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_SM8750_MTP.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_GLYMUR_CRD.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_GLYMUR_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_MAHUA_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_MAHUA_CRD.xml
 endif
 
 if COMPILE_ADSPRPCD

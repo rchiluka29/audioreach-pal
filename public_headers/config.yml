@@ -10,3 +10,5 @@ branches:
           - device/inc/Device.h
           - session/inc/Session.h
           - stream/inc/Stream.h
+abi_checks:
+  - path: build/usr/lib/libpal.so

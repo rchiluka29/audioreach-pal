@@ -121,7 +121,7 @@ if COMPILE_COMPRESS
 libpal_la_CPPFLAGS += -DSND_COMPRESS_DEC_HDR
 endif
 libpal_la_LIBADD   += -L${abs_top_builddir}/plugins/vui_interface/.libs
-libpal_la_LIBADD   += ${abs_top_builddir}/plugins/PluginManager/.libs/libplugin_manager.a
+libpal_la_LIBADD   += ${abs_top_builddir}/plugins/PluginManager/.libs/libplugin_manager.la
 
 if CUTILS_SUPPORTED
 libpal_la_CPPFLAGS += -DPAL_CUTILS_SUPPORTED
@@ -131,32 +131,11 @@ endif
 if BUILDSYSTEM_OPENWRT
 # config files for OPENWRT
 else
-libpal_la_list      = ./configs/qcom/IoT/qcm6490/mixer_paths_qcm6490_idp.xml \
-                      ./configs/qcom/IoT/qcm6490/resourcemanager_qcm6490_idp.xml \
-                      ./configs/qcom/IoT/qcm6490/mixer_paths_qcm6490_rb3.xml \
-                      ./configs/qcom/IoT/qcm6490/resourcemanager_qcm6490_rb3.xml \
-                      ./configs/qcom/IoT/qcm6490/mixer_paths_qcm6490_rb3_vision.xml \
-                      ./configs/qcom/IoT/qcm6490/resourcemanager_qcm6490_rb3_vision.xml \
-                      ./configs/qcom/IoT/qcm6490/mixer_paths_qcm6490_rb3_vc.xml \
-                      ./configs/qcom/IoT/qcm6490/resourcemanager_qcm6490_rb3_vc.xml \
-                      ./configs/qcom/IoT/qcm6490/usecaseKvManager.xml \
-                      ./configs/qcom/IoT/qcm6490/mixer_paths_qcm6490_rb3_ia.xml \
-                      ./configs/qcom/IoT/qcm6490/resourcemanager_qcm6490_rb3_ia.xml \
+libpal_la_list      = ./configs/qcom/IoT/qcm6490/usecaseKvManager.xml \
                       ./configs/qcom/IoT/qcs8300/mixer_paths_MONACO_EVK.xml \
                       ./configs/qcom/IoT/qcs8300/resourcemanager_MONACO_EVK.xml \
-                      ./configs/qcom/IoT/qcs9075/mixer_paths_qcs9075_rb8.xml \
-                      ./configs/qcom/IoT/qcs9075/resourcemanager_qcs9075_rb8.xml \
-                      ./configs/qcom/IoT/qcs9100/mixer_paths_qcs9100_ridesx.xml \
-                      ./configs/qcom/IoT/qcs9100/resourcemanager_qcs9100_ridesx.xml \
-                      ./configs/qcom/IoT/qcs6490/mixer_paths_QCS6490_RB3Gen2.xml \
-                      ./configs/qcom/IoT/qcs6490/resourcemanager_QCS6490_RB3Gen2.xml \
                       ./configs/qcom/IoT/qcs9075/mixer_paths_LEMANS_EVK.xml \
                       ./configs/qcom/IoT/qcs9075/resourcemanager_LEMANS_EVK.xml
-                      ./configs/qcs9100/resourcemanager_qcs9100_ridesx.xml \
-                      ./configs/qcs6490/mixer_paths_QCS6490_RB3Gen2.xml \
-                      ./configs/qcs6490/resourcemanager_QCS6490_RB3Gen2.xml \
-                      ./configs/qcs9075/mixer_paths_LEMANS_EVK.xml \
-                      ./configs/qcs9075/resourcemanager_LEMANS_EVK.xml
 
 # install essential xml files under /etc
 root_etcdir      = "/etc"
@@ -164,21 +143,7 @@ root_etc_SCRIPTS = $(libpal_la_list)
 install-data-hook:
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_MONACO_EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_MONACO_EVK.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_qcs9100_ridesx.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_qcs9100_ridesx.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_qcs9075_rb8.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_qcs9075_rb8.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_qcm6490_idp.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_qcm6490_idp.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_qcm6490_rb3.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_qcm6490_rb3.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_qcm6490_rb3_vision.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_qcm6490_rb3_vision.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_qcm6490_rb3_vc.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_qcm6490_rb3_vc.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/usecaseKvManager.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_qcm6490_rb3_ia.xml
-	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_qcm6490_rb3_ia.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_QCS6490_RB3Gen2.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_QCS6490_RB3Gen2.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_LEMANS_EVK.xml

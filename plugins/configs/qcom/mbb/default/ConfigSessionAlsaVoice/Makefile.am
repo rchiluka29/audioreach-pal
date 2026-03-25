@@ -36,7 +36,7 @@ libsession_voice_config_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\
 libsession_voice_config_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libsession_voice_config_la_LIBADD   += -L${abs_top_builddir}/session/SessionAR/.libs -lsession_ar
 libsession_voice_config_la_LIBADD   += -L${abs_top_builddir}/session/SessionAlsaVoice/.libs -lsession_voice
-libsession_voice_config_la_LIBADD   += ${abs_top_builddir}/plugins/configs/qcom/mbb/default/ConfigSessionUtils/.libs/libsession_utils_config.a
+libsession_voice_config_la_LIBADD   += ${abs_top_builddir}/plugins/configs/qcom/mbb/default/ConfigSessionUtils/.libs/libsession_utils_config.la
 
 if CUTILS_SUPPORTED
 libsession_voice_config_la_CPPFLAGS += -DPAL_CUTILS_SUPPORTED

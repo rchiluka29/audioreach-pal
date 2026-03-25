@@ -37,7 +37,7 @@ libsession_compress_config_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__
 libsession_compress_config_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libsession_compress_config_la_LIBADD   += -L${abs_top_builddir}/session/SessionAR/.libs -lsession_ar
 libsession_compress_config_la_LIBADD   += -L${abs_top_builddir}/session/SessionAlsaCompress/.libs -lsession_compress
-libsession_compress_config_la_LIBADD   += ${abs_top_builddir}/plugins/configs/qcom/mbb/default/ConfigSessionUtils/.libs/libsession_utils_config.a
+libsession_compress_config_la_LIBADD   += ${abs_top_builddir}/plugins/configs/qcom/mbb/default/ConfigSessionUtils/.libs/libsession_utils_config.la
 
 if CUTILS_SUPPORTED
 libsession_compress_config_la_CPPFLAGS += -DPAL_CUTILS_SUPPORTED

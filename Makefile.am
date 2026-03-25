@@ -121,7 +121,7 @@ if COMPILE_COMPRESS
 libpal_la_CPPFLAGS += -DSND_COMPRESS_DEC_HDR
 endif
 libpal_la_LIBADD   += -L${abs_top_builddir}/plugins/vui_interface/.libs
-libpal_la_LIBADD   += ${abs_top_builddir}/plugins/PluginManager/.libs/libplugin_manager.a
+libpal_la_LIBADD   += ${abs_top_builddir}/plugins/PluginManager/.libs/libplugin_manager.la
 
 if CUTILS_SUPPORTED
 libpal_la_CPPFLAGS += -DPAL_CUTILS_SUPPORTED

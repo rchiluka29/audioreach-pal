@@ -2705,7 +2705,7 @@ int ResourceManager::deregisterStream(Stream *s)
             if (it->second.empty())
                 activeStreamMap.erase(it);
         } else {
-            PAL_ERR(LOG_TAG, "Could not find stream to deregister", type);
+            PAL_ERR(LOG_TAG, "Could not find stream type %d to deregister", type);
             ret = -ENOENT;
         }
     } else {

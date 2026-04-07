@@ -170,6 +170,8 @@ install-data-hook:
 	chmod  go+r $(DESTDIR)$(root_etcdir)/usecaseKvManager.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_QCS6490_RB3Gen2.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_QCS6490_RB3Gen2.xml
+	ln -sf mixer_paths_QCS6490_RB3Gen2.xml $(DESTDIR)$(root_etcdir)/mixer_paths_QCM6490_IDP.xml
+	ln -sf resourcemanager_QCS6490_RB3Gen2.xml $(DESTDIR)$(root_etcdir)/resourcemanager_QCM6490_IDP.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_LEMANS_EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_LEMANS_EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_Shikra-CQM-EVK.xml

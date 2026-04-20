@@ -145,6 +145,7 @@ libpal_la_list      = ./configs/qcom/IoT/qcm6490/usecaseKvManager.xml \
                       ./configs/qcom/IoT/shikra/resourcemanager_Shikra-CQM-EVK.xml \
                       ./configs/qcom/IoT/shikra/mixer_paths_Shikra-CQS-EVK.xml \
                       ./configs/qcom/IoT/shikra/resourcemanager_Shikra-CQS-EVK.xml\
+                      ./configs/qcom/IoT/shikra/plugin_manager.xml\
                       ./configs/qcom/IoT/x1e80100/mixer_paths_X1E80100_CRD.xml \
                       ./configs/qcom/IoT/x1e80100/resourcemanager_X1E80100_CRD.xml \
                       ./configs/qcom/IoT/x1e80100/mixer_paths_X1E80100_EVK.xml \
@@ -178,6 +179,7 @@ install-data-hook:
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_Shikra-CQM-EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_Shikra-CQS-EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_Shikra-CQS-EVK.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/plugin_manager.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_X1E80100_CRD.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_X1E80100_CRD.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_X1E80100_EVK.xml

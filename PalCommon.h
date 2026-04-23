@@ -44,6 +44,13 @@
 #define ALOGI(fmt, arg...) syslog (LOG_INFO, fmt, ##arg)
 #define ALOGD(fmt, arg...) syslog (LOG_DEBUG, fmt, ##arg)
 #define ALOGV(fmt, arg...) syslog (LOG_NOTICE, fmt, ##arg)
+#define LOG_FATAL_IF(cond, fmt, ...)                \
+    do {                                            \
+        if (cond) {                                 \
+            syslog(LOG_CRIT, fmt, ##__VA_ARGS__);   \
+            abort();                                \
+        }                                           \
+    } while (0)
 #else
 #include <log/log.h>
 #endif

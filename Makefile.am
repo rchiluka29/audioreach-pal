@@ -131,7 +131,10 @@ endif
 if BUILDSYSTEM_OPENWRT
 # config files for OPENWRT
 else
+
 libpal_la_list      = ./configs/qcom/IoT/qcm6490/usecaseKvManager.xml \
+                      ./configs/qcom/IoT/qcs615/mixer_paths_TALOS_EVK.xml \
+                      ./configs/qcom/IoT/qcs615/resourcemanager_TALOS_EVK.xml \
                       ./configs/qcom/IoT/qcs8300/mixer_paths_MONACO_EVK.xml \
                       ./configs/qcom/IoT/qcs8300/resourcemanager_MONACO_EVK.xml \
                       ./configs/qcom/IoT/qcs6490/mixer_paths_QCS6490_RB3Gen2.xml \
@@ -141,7 +144,20 @@ libpal_la_list      = ./configs/qcom/IoT/qcm6490/usecaseKvManager.xml \
                       ./configs/qcom/IoT/shikra/mixer_paths_Shikra-CQM-EVK.xml \
                       ./configs/qcom/IoT/shikra/resourcemanager_Shikra-CQM-EVK.xml \
                       ./configs/qcom/IoT/shikra/mixer_paths_Shikra-CQS-EVK.xml \
-                      ./configs/qcom/IoT/shikra/resourcemanager_Shikra-CQS-EVK.xml
+                      ./configs/qcom/IoT/shikra/resourcemanager_Shikra-CQS-EVK.xml\
+                      ./configs/qcom/IoT/shikra/plugin_manager.xml\
+                      ./configs/qcom/IoT/x1e80100/mixer_paths_X1E80100_CRD.xml \
+                      ./configs/qcom/IoT/x1e80100/resourcemanager_X1E80100_CRD.xml \
+                      ./configs/qcom/IoT/x1e80100/mixer_paths_X1E80100_EVK.xml \
+                      ./configs/qcom/IoT/x1e80100/resourcemanager_X1E80100_EVK.xml \
+                      ./configs/qcom/IoT/sm8750/mixer_paths_SM8750_MTP.xml \
+                      ./configs/qcom/IoT/sm8750/resourcemanager_SM8750_MTP.xml \
+                      ./configs/qcom/IoT/GLYMUR/mixer_paths_GLYMUR_CRD.xml \
+                      ./configs/qcom/IoT/GLYMUR/resourcemanager_GLYMUR_CRD.xml \
+                      ./configs/qcom/IoT/MAHUA/mixer_paths_MAHUA_CRD.xml \
+                      ./configs/qcom/IoT/MAHUA/resourcemanager_MAHUA_CRD.xml \
+                      ./configs/qcom/IoT/Kaanapali/mixer_paths_Kaanapali_MTP.xml \
+                      ./configs/qcom/IoT/Kaanapali/resourcemanager_Kaanapali_MTP.xml
 
 
 # install essential xml files under /etc
@@ -150,15 +166,32 @@ root_etc_SCRIPTS = $(libpal_la_list)
 install-data-hook:
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_MONACO_EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_MONACO_EVK.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_TALOS_EVK.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_TALOS_EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/usecaseKvManager.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_QCS6490_RB3Gen2.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_QCS6490_RB3Gen2.xml
+	ln -sf mixer_paths_QCS6490_RB3Gen2.xml $(DESTDIR)$(root_etcdir)/mixer_paths_QCM6490_IDP.xml
+	ln -sf resourcemanager_QCS6490_RB3Gen2.xml $(DESTDIR)$(root_etcdir)/resourcemanager_QCM6490_IDP.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_LEMANS_EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_LEMANS_EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_Shikra-CQM-EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_Shikra-CQM-EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_Shikra-CQS-EVK.xml
 	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_Shikra-CQS-EVK.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/plugin_manager.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_X1E80100_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_X1E80100_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_X1E80100_EVK.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_X1E80100_EVK.xml 
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_SM8750_MTP.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_SM8750_MTP.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_GLYMUR_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_GLYMUR_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_MAHUA_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_MAHUA_CRD.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/mixer_paths_Kaanapali_MTP.xml
+	chmod  go+r $(DESTDIR)$(root_etcdir)/resourcemanager_Kaanapali_MTP.xml
 endif
 
 if COMPILE_ADSPRPCD

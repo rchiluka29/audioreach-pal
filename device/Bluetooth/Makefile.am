@@ -5,6 +5,7 @@ EXTRA_DIST = $(pkgconfig_DATA)
 if BUILDSYSTEM_OPENWRT
 
 AM_CPPFLAGS := -I $(top_srcdir)/device/Bluetooth/inc
+AM_CPPFLAGS += -I $(top_srcdir)/device/Bluetooth/internal
 AM_CPPFLAGS += -I $(top_srcdir)/inc
 AM_CPPFLAGS += -I $(top_srcdir)/
 AM_CPPFLAGS += -I $(top_srcdir)/utils/inc
@@ -20,6 +21,7 @@ AM_CPPFLAGS += -I $(top_srcdir)/plugins/vui_interface/api/vui-interface
 dev_bt_sources = ./src/Bluetooth.cpp
 else
 AM_CPPFLAGS := -I $(top_srcdir)/device/Bluetooth/inc
+AM_CPPFLAGS += -I $(top_srcdir)/device/Bluetooth/internal
 AM_CPPFLAGS += -I $(top_srcdir)/inc
 AM_CPPFLAGS += -I $(top_srcdir)
 AM_CPPFLAGS += -I $(top_srcdir)/utils/inc
@@ -49,7 +51,7 @@ libdev_bt_la_LIBADD    = @GLIB_LIBS@ -lexpat -ltinyalsa -ltinycompress
 libdev_bt_la_LIBADD   += -L${abs_top_builddir}/session/SessionAR/.libs -lsession_ar
 libdev_bt_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libdev_bt_la_CPPFLAGS := $(AM_CPPFLAGS)
-libdev_bt_la_CPPFLAGS += -std=c++14
+libdev_bt_la_CPPFLAGS += -std=c++17
 libdev_bt_la_LDFLAGS   = -shared -avoid-version
 
 libdev_bt_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h

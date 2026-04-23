@@ -28,7 +28,7 @@
 
 * Changes from Qualcomm Technologies, Inc. are provided under the following license:
 * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
-* SPDX-License-Identifier: BSD-3-Clause-Clear
+* SPDX-License-Identifier: BSD-3-Clause-Clear-Clear
 *  -->
 
 <resource_manager_info>
@@ -49,7 +49,7 @@
         <param key="device_mux_config" value ="false" />
         <param key="upd_virtual_port" value ="false" />
     </config_params>
-     <config_max_sessions>
+    <config_max_sessions>
         <stream name="PAL_STREAM_LOW_LATENCY" max_size="8" />
         <stream name="PAL_STREAM_DEEP_BUFFER" max_size="3" />
         <stream name="PAL_STREAM_GENERIC" max_size="2" />

@@ -27,7 +27,7 @@
 * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 * Changes from Qualcomm Technologies, Inc. are provided under the following license:
-* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+* CCopyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 * SPDX-License-Identifier: BSD-3-Clause-Clear
 *  -->
 
@@ -48,8 +48,8 @@
         <param key="signal_handler" value ="false" />
         <param key="device_mux_config" value ="false" />
         <param key="upd_virtual_port" value ="false" />
-    </config_params>
-     <config_max_sessions>
+     </config_params>
+      <config_max_sessions>
         <stream name="PAL_STREAM_LOW_LATENCY" max_size="8" />
         <stream name="PAL_STREAM_DEEP_BUFFER" max_size="3" />
         <stream name="PAL_STREAM_GENERIC" max_size="2" />
@@ -57,7 +57,7 @@
         <stream name="PAL_STREAM_PCM_OFFLOAD" max_size="2" />
         <stream name="PAL_STREAM_ULTRA_LOW_LATENCY" max_size="8" />
     </config_max_sessions>
-    <config_volume>
+     <config_volume>
         <use_volume_set_param>0</use_volume_set_param>
         <supported_streams>
             <supported_stream>PAL_STREAM_ULTRA_LOW_LATENCY</supported_stream>
@@ -339,7 +339,7 @@
             <id>PAL_DEVICE_OUT_SPEAKER</id>
             <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>4</max_channels>
-            <channels>2</channels>
+            <channels>4</channels>
             <samplerate>48000</samplerate>
             <snd_device_name>speaker</snd_device_name>
             <speaker_protection_enabled>0</speaker_protection_enabled>
@@ -377,7 +377,7 @@
             <id>PAL_DEVICE_OUT_HANDSET</id>
             <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>2</max_channels>
-            <channels>1</channels>
+            <channels>2</channels>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
             <ext_ec_ref_enabled>0</ext_ec_ref_enabled>
             <samplerate>48000</samplerate>

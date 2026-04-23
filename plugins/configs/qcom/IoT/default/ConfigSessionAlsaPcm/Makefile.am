@@ -39,7 +39,7 @@ libsession_pcm_config_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) 
 libsession_pcm_config_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libsession_pcm_config_la_LIBADD   += -L${abs_top_builddir}/session/SessionAlsaPcm/.libs -lsession_pcm
 libsession_pcm_config_la_LIBADD   += -L${abs_top_builddir}/session/SessionAR/.libs -lsession_ar
-libsession_pcm_config_la_LIBADD   += ${abs_top_builddir}/plugins/configs/qcom/IoT/default/ConfigSessionUtils/.libs/libsession_utils_config.a
+libsession_pcm_config_la_LIBADD   += ${abs_top_builddir}/plugins/configs/qcom/IoT/default/ConfigSessionUtils/.libs/libsession_utils_config.la
 
 if BUILDSYSTEM_OPENWRT
 libsession_pcm_config_la_LIBADD += -lglib-2.0

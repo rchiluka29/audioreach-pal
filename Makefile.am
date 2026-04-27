@@ -141,10 +141,10 @@ libpal_la_list      = ./configs/qcom/IoT/qcm6490/usecaseKvManager.xml \
                       ./configs/qcom/IoT/qcs6490/resourcemanager_QCS6490_RB3Gen2.xml \
                       ./configs/qcom/IoT/qcs9075/mixer_paths_LEMANS_EVK.xml \
                       ./configs/qcom/IoT/qcs9075/resourcemanager_LEMANS_EVK.xml \
-                      ./configs/qcom/IoT/shikra/mixer_paths_Shikra-CQM-EVK.xml \
-                      ./configs/qcom/IoT/shikra/resourcemanager_Shikra-CQM-EVK.xml \
-                      ./configs/qcom/IoT/shikra/mixer_paths_Shikra-CQS-EVK.xml \
-                      ./configs/qcom/IoT/shikra/resourcemanager_Shikra-CQS-EVK.xml\
+                      ./configs/qcom/IoT/shikra/mixer_paths_Shikra_CQM_EVK.xml \
+                      ./configs/qcom/IoT/shikra/resourcemanager_Shikra_CQM_EVK.xml \
+                      ./configs/qcom/IoT/shikra/mixer_paths_Shikra_CQS_EVK.xml \
+                      ./configs/qcom/IoT/shikra/resourcemanager_Shikra_CQS_EVK.xml\
                       ./configs/qcom/IoT/shikra/plugin_manager.xml\
                       ./configs/qcom/IoT/x1e80100/mixer_paths_X1E80100_CRD.xml \
                       ./configs/qcom/IoT/x1e80100/resourcemanager_X1E80100_CRD.xml \

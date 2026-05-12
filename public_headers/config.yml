@@ -1,0 +1,14 @@
+project: https://github.com/AudioReach/audioreach-pal
+
+branches:
+  master:
+    modes:
+      blocking:
+        headers:
+          - inc/PalDefs.h
+          - inc/PalApi.h
+          - device/inc/Device.h
+          - session/inc/Session.h
+          - stream/inc/Stream.h
+abi_checks:
+  - path: build/usr/lib/libpal.so
